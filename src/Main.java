@@ -6,10 +6,10 @@ public class Main {
         //Scanner scan = new Scanner(System.in);
         int[] arr = { 3, 4, 8, 9, 10 };
         String[] arrayStrings = { "Ciao", "come", "stai", "caro" };
-        int grandezza = 4;
+        int grandezza = 5;
 
-        // maxMin(arr);
-        // sommaPari(arr);
+        maxMin(arr);
+        sommaPari(arr);
         cercaStringa(arrayStrings, grandezza);
 
 
@@ -18,16 +18,16 @@ public class Main {
     // qui il metodo c
 
     public static boolean cercaStringa(String[] arrayStrings, int grandezza) {
-        int arrlen = arrayStrings.length;
-    
-        if (arrlen == grandezza) {
-            System.out.println("Il valore esiste all'interno: " + true);
-            return true;
-        } else {
-            System.out.println("Il valore non esiste all'interno: " + false);
-            return false;
+        for (int i = 0; i < arrayStrings.length; i++) {
+            if (arrayStrings[i].length() == grandezza) {
+                System.out.println("Il valore esiste all'interno: true");
+                return true;
+            }
         }
+        System.out.println("Il valore non esiste all'interno: false");
+        return false;
     }
+    
     
 
     // qui i metodi a e b
